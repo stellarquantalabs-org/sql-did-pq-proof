@@ -53,7 +53,13 @@ ots verify build-hashlog.sha256.ots
 
 # You should see something like:
 ```bash
-Success! Timestamp verified in Bitcoin block #XXXXXXX at YYYY-MM-DD HH:MM:SS
+Assuming target filename is 'build-hashlog.sha256'
+Got 1 attestation(s) from https://finney.calendar.eternitywall.com
+Got 1 attestation(s) from https://bob.btc.calendar.opentimestamps.org
+Got 1 attestation(s) from https://btc.calendar.catallaxy.com
+Got 1 attestation(s) from https://alice.btc.calendar.opentimestamps.org
+File anchored in Bitcoin blockchain in block 847003
+Timestamp complete
 ```
 ✅ This confirms the hash existed publicly at that point in time—immutably recorded on Bitcoin.
 
