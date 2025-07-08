@@ -17,6 +17,29 @@ Our intent is to publicly prove authorship and cryptographic integrity, anchored
 | `build-hashlog.sha256.ots`    | Bitcoin-anchored OpenTimestamps proof for the hash                  |
 | `ots-timestamp-log.md`        | Raw terminal output of the timestamping process                     |
 
+## ⚙️ Verifying on Ubuntu (Recommended)
+
+For best compatibility and cryptographic security, we recommend verifying the timestamp using Ubuntu (via WSL on Windows or natively on Linux/macOS).
+
+### 1. Install WSL with Ubuntu (Windows only)
+```powershell
+wsl --install
+```
+Then open Ubuntu and set your username/password.
+### 2. Install Python + OpenTimestamps:
+```bash
+sudo apt update
+sudo apt install python3-pip -y
+pip3 install opentimestamps-client
+```
+### 3. Clone this repo and verify:
+```bash
+git clone https://github.com/stellarquantalabs-org/sql-did-pq-proof.git
+cd sql-did-pq-proof
+ots verify build-hashlog.sha256.ots
+```
+You should see confirmations from OpenTimestamps calendars showing anchoring to Bitcoin.
+
 
 ## ⛓️ Verify the Bitcoin Timestamp (Proof-of-Existence)
 To verify the SHA-256 hash of the message archive was anchored into the Bitcoin blockchain:
@@ -33,6 +56,7 @@ ots verify build-hashlog.sha256.ots
 Success! Timestamp verified in Bitcoin block #XXXXXXX at YYYY-MM-DD HH:MM:SS
 ```
 ✅ This confirms the hash existed publicly at that point in time—immutably recorded on Bitcoin.
+
 
 ## 🔐 Verify the Signature (Optional)
 To verify the signature for `msg.txt` using the public key:
