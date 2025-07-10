@@ -1,5 +1,5 @@
 # sql-did-pq-proof
-# (README.md) Post-Quantum Signature Timestamp for SQL Verify
+# Post-Quantum Signature Timestamp for SQL Verify
 ⛓️ **Timestamped on Bitcoin via OpenTimestamps** `✔️`
 
 This repository contains a Bitcoin-anchored timestamp proof for a verifiable credential archive signed using post-quantum cryptography (Dilithium). Anyone can independently verify that this archive existed at the time of timestamping.
